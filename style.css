@@ -1,0 +1,7 @@
+:root{--night:#0a0d15;--paper:#f4eee0;--dim:#a9a696;--amber:#f0b567}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--paper);font:21px/1.6 "Instrument Serif",Georgia,serif}
+main{max-width:38em;margin:auto;padding:64px 24px 96px}
+h1,h2{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+h1{font-size:clamp(40px,8vw,68px);margin:0}h2{font-size:24px;margin:48px 0 12px}
+a{color:var(--amber);overflow-wrap:anywhere}.by{color:var(--dim);margin:12px 0 0}ul{padding-left:1.1em}li{margin:.5em 0}
