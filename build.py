@@ -8,12 +8,12 @@ import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-HEADINGS = {"Author's note", "AI disclosure", "Craft influences", "Image credits", "Fonts", "Trailer sound"}
+HEADINGS = {"Author's note", "AI disclosure", "Craft influences", "Image credits", "Fonts", "Trailer sound", "Tentang halaman ini", "Kredit foto", "Pernyataan AI"}
 HEAD = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{t}</title><meta name="description" content="{d}"><link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif&display=swap" rel="stylesheet"><link rel="stylesheet" href="{css}"></head><body><main>'
 
 
 def link(s):
-    return re.sub(r"(https?://[^\s]+)", r'<a href="\1">\1</a>', html.escape(s, quote=False))
+    return re.sub(r"(https?://[^\s]+?)([).,]*)(?=\s|$)", r'<a href="\1">\1</a>\2', html.escape(s, quote=False))
 
 
 items = []
